@@ -7,7 +7,7 @@
         <div>
         <script>
                 async function getTime() {
-                        const response = await fetch('http://ec2-98-80-210-170.compute-1.amazonaws.com/getTime')
+                        const response = await fetch(`${window.location.origin}/getTime`)
                         const time = await response.text()
                         document.getElementById('timeDisplay').innerText = 'You pressed the button at ' + time
                 }
